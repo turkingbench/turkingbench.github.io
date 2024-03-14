@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="We introduce TurkAment, a benchmark of tasks represented as webpages with multi-modal context to measure the generalizablity of web-based agents to a variety of naturally-constructed tasks."
+    name="description" />
+  <meta content="TurkAment: A Tournament Among Web-based Agents" property="og:title" />
+  <meta content="We introduce TurkAment, a benchmark of tasks represented as webpages with multi-modal context to measure the generalizablity of web-based agents to a variety of naturally-constructed tasks."
+    property="og:description" />
+  <meta content="https://dynalang.github.io/data/open_graph.png" property="og:image" />
+  <meta content="TurkAment: A Tournament Among Web-based Agents" property="twitter:title" />
+  <meta content="We introduce TurkAment, a benchmark of tasks represented as webpages with multi-modal context to measure the generalizablity of web-based agents to a variety of naturally-constructed tasks." property="twitter:description" />
+  <meta name="twitter:site" content="@DanielKhashabi" />
+  <meta name="twitter:creator" content="@DanielKhashabi" />
+  <meta property="og:type" content="website" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+  <title>Learning to Model the World with Language</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z7HCWJNBC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9Z7HCWJNBC');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Source+Sans+3:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Source+Sans+3:wght@400;700&display=swap">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="section">
+    <div class="container">
+      <div class="title-row">
+        <h1 class="title">TurkAment: A Tournament Among<br> Web-based Agents</h1>
+      </div>
+      <div class="row">
+        <div class="author-col">
+          <a href="https://www.linkedin.com/in/kevinluoxu/" target="_blank" class="author-text">
+            Kevin Xu
+          </a>
+        </div>
+        <div class="author-col">
+          <a href="https://yeganehkordi.github.io/" target="_blank" class="author-text">
+            Yeganeh Kordi
+          </a>
+        </div>
+        <div class="invisible"><br></div>
+        <div class="author-col">
+          <a href="https://katesanders9.github.io/" target="_blank" class="author-text">
+            Kate Sanders
+          </a>
+        </div>
+        <div class="author-col">
+          <a href="https://homes.cs.washington.edu/~yizhongw/" target="_blank" class="author-text">
+            Yizhong Wang
+            <span class="superscript"></span>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="author-col">
+          <a href="https://www.linkedin.com/in/adam-byerly/" target="_blank" class="author-text">
+            Adam Byerly
+          </a>
+        </div>
+        <div class="author-col">
+          <a href="https://jackz.io/" target="_blank" class="author-text">
+            Jack Zhang
+          </a>
+        </div>
+        <div class="author-col">
+          <a href="https://www.cs.jhu.edu/~vandurme/" target="_blank" class="author-text">
+            Benjamin Van Durme
+          </a>
+        </div>
+        <div class="author-col">
+          <a href="https://www.cs.jhu.edu/~danielk/" target="_blank" class="author-text">
+            Daniel Khashabi
+          </a>
+        </div>
+      </div>
+      </div>
+    <p id="uc-berkeley">
+      Johns Hopkins University &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;
+      Brown University &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;
+      University of Washington
+    </p>
+
+      <div class="row button-row">
+        <a class="link-button" href="https://arxiv.org/abs/2308.01399" target="_blank" class="link-block">Paper</a>
+        <a class="link-button" href="https://github.com/jlin816/dynalang" class="link-block">Code</a>
+        <a class="link-button" href="https://twitter.com/realJessyLin/status/1687515845281624064" class="link-block">Tweet</a>
+      </div>
+      <p class="tldr">
+        <b>TL;DR</b>:
+        We introduce TurkAment, a benchmark of tasks represented as webpages with multi-modal context to measure the generalizablity of web-based agents to a variety of naturally-constructed tasks.
+      </p>
+      <video id="main-video" muted autoplay controls playsinline loop>
+        <source id="mp4" src="data/videos/tasks-1024.mp4" type="video/mp4">
+      </video>
+
+      <div id="content">
+        <h2 class="section-header">Overview</h2>
+        <div class="paragraph">
+          <p>
+          Recent chatbots have demonstrated impressive ability to understand and communicate in raw-text form. However, there is more to the world than raw text. For example, humans spend long hours of their time on web pages, where text is intertwined with other modalities and tasks are accomplished in the form of various complex interactions.
+Can self-supervised state-of-the-art multi-modal models generalize to such complex domains?
+</p>
+          <p>
+To address this question, we introduce \emph{\datasetName},
+a benchmark of tasks formulated as web pages containing textual instructions with multi-modal context.
+Unlike existing work which employs artificially synthesized web pages, here we use natural HTML pages that were originally designed for crowdsourcing workers for various annotation purposes. The HTML instructions of each task are also instantiated with various values (obtained from the crowdsourcing tasks) to form new instances of the task. This benchmark contains 32.2K instances distributed across 158 tasks.
+</p>
+   <p>
+Additionally, to facilitate the evaluation on \datasetName, we develop an evaluation framework that connects the responses of chatbots to modifications on web pages (modifying a text box, checking a radio, etc.). We evaluate the performance of state-of-the-art models on this benchmark, testing a range of self-supervised models (language-only, vision-only, layout-only, and their combination). Our findings reveal that these models perform significantly better than random chance, yet considerable room exist for improvement. We hope this benchmark will help facilitate the evaluation and development of web-based agents.
+          </p>
+        </div>
+
+        <h2 class="section-header">Citation</h2>
+        <div class="citation">
+          <pre id="codecell0">@article{lin2023learning,
+     title={TurkAment: A Tournament Among Web-based Agents},
+     author={Xu, Kevin and Kordi, Yeganeh and Sanders, Kate and Wang, Yizhong and Byerly, Adam and Zhang, Jack and Van Durme, Benjamin and Khashabi, Daniel},
+     year={2023},
+     eprint={2308.01399},
+     archivePrefix={arXiv},
+}</pre>
+        </div>
+
+        <br><br>
+        <div class="paragraph-center">For more information, check out the paper, code, and tweet summary:</div>
+        <div class="row button-row">
+          <a class="link-button" href="https://arxiv.org/abs/2308.01399" target="_blank" class="link-block">Paper</a>
+          <a class="link-button" href="https://github.com/jlin816/dynalang" class="link-block">Code</a>
+          <a class="link-button" href="https://twitter.com/realJessyLin/status/1687515845281624064" class="link-block">Tweet</a>
+        </div>
+
+      </div>
+
+    <div class="paragraph-center">(template credit: <a href="https://dynalang.github.io/">Dynalang</a>)</div>
+
+
+    </div>
+  </div>
+</body>
+</html>
